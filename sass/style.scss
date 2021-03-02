@@ -1,0 +1,19 @@
+$primary: #5AB658;
+$secondary: #042B4F;
+$light: #fff;
+
+
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+@import "../bootstrap-4.5.3/scss/bootstrap.scss";
+
+@import "mixins";
+@import "home-page";
+@import "listings-page";
+@import "listings-modal";
+@import "resets";
+
+body {
+  font-family: 'Poppins', sans-serif;
+}

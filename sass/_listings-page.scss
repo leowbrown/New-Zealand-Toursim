@@ -1,0 +1,218 @@
+@import 'mixins';
+
+
+// hero img
+
+.listings-heroimg-container {
+  position: absolute;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.listings-desktop-bg  {
+  @include w-h(100vw, auto);
+}
+
+// nav
+  // header
+
+.listings-header {
+  font-size: 2vw;
+  font-weight: 600;
+  line-height: 1.5vw;
+  padding: 2vw 0 0 4vw;
+}
+
+.listings-subheader {
+  font-size: .8vw;
+  font-weight: 500;
+  padding-left: 4.3vw;
+}
+
+  // burger icon
+
+.listings-burger-container {
+  padding: 2vw 4vw 0 0;
+}
+
+.listings-burger {
+  @include w-h(1.5vw, 1.2vw);
+  position: relative;
+}
+
+.listings-burger-middle {
+  width: 100%;
+  background: $light;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  border-radius: 3px;
+}
+
+.listings-burger-top {
+  width: 100%;
+  background: $light;
+  height: 3px;
+  border-radius: 3px;
+}
+
+.listings-burger-bottom {
+  width: 100%;
+  background: $light;
+  height: 3px;
+  position: absolute;
+  top: 100%;
+  border-radius: 3px;
+}
+
+
+// listings results
+
+  // search results MSG
+
+  .searchResults {
+    font-size: 1vw;
+    font-weight: 400;
+    padding-left: 1vw;
+    margin-bottom: 50px;
+    color: $light;
+    z-index: -1;
+  }
+
+  // cards
+
+  .listings-card {
+    height: 340px;
+    border-radius: 10px;
+    margin: 0 5px 40px;
+  }
+  .listings-card-text-container{
+    margin-top: 20px;
+  }
+  .listings-card-img-container {
+    margin-top: 30px;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    object-fit: cover;
+    padding: 0 30px;
+  }
+
+  .listings-card-img {
+    width: auto;
+    height: 80%;
+    border-radius: 10px;
+    padding: 0;
+  }
+
+  .listings-card-footer-container {
+    position: relative;
+  }
+
+  .listings-card-footer {
+    position: absolute;
+    bottom: 10px;
+  }
+
+  .listings-card-header {
+    font-size: 24px;
+  }
+
+  .listings-card-footer, .listings-card-price {
+    font-size: 18px;
+  }
+
+
+@media only screen and (max-width: 500px) {
+
+  .listings-results-header {
+    display: none;
+  }
+
+  .listings-card-container {
+    width: 90vw;
+    margin: 0;
+  }
+
+  .listings-card {
+    padding: 20px;
+    height: 500px;
+    font-size: 14px;
+  }
+
+  .listings-card-text-container {
+    margin: 0;
+    padding: 20px 0 0;
+    height: 350px;
+  }
+
+  .listings-card-img-container {
+    width: 100%;
+    height: 150px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .listings-card-img {
+    height: auto;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    object-fit: cover;
+
+  }
+
+  .listings-header {
+    font-size: 3vh;
+    font-weight: 600;
+    line-height: 2.5vh;
+    padding: 3vh 0 0 6vh;
+  }
+
+  .listings-subheader {
+    font-size: 2vh;
+    font-weight: 500;
+    padding-left: 6.3vh;
+    margin-bottom: 30px;
+  }
+
+  .listings-desktop-bg {
+    width: 150%;
+  }
+
+  .listings-card-footer, .listings-card-price {
+    font-size: 16px;
+  }
+
+  .listings-card-header, {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+
+  .listings-header {
+    font-size: 3vh;
+    font-weight: 600;
+    line-height: 2.5vh;
+    padding: 3vh 0 0 6vh;
+  }
+
+  .listings-subheader {
+    font-size: 2vh;
+    font-weight: 500;
+    padding-left: 6.3vh;
+    margin-bottom: 30px;
+  }
+
+  .listings-burger {
+    @include w-h(2.2vh, 1.7vh);
+    margin: 2vh;
+  }
+
+  .searchResults {
+    font-size: 13px;
+    font-weight: 500;
+    color: $primary;
+  }
+}
